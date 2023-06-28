@@ -11,7 +11,7 @@ adversarially attacked and unseen source documents and find that ChatGPT is bett
 
 ## 🚀 CLCTS Corpus
 
-We release our [CLCTS datasets](path/to/data). 
+We release our [CLCTS datasets](dataset/CLCTS_corpus). 
 
 ## 🚀 Experiments
 To reproduce the evaluations conducted in this work, please check the folder [experiments](experiments).
