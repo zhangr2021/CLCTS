@@ -14,8 +14,9 @@ adversarially attacked and unseen source documents and find that ChatGPT is bett
 We release our [CLCTS datasets](dataset/CLCTS_corpus). 
 
 ## 🚀 Experiments
-To reproduce the evaluations conducted in this work, please check the folder [experiments](experiments).
+To reproduce the evaluations conducted in this work, please check the folder [results for section datasets](results/section_datasets) and [results for section experiments](results/section_experiments).
 
+We provide both human and ChatGPT evaluation results together with automatic metric evaluation for [hDe](results/section_experiments/hDe) and [hEn](results/section_experiments/hEn). 
 
 If you use the code or data from this work, please include the following citation:
 
