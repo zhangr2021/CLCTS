@@ -6,7 +6,7 @@ from sklearn.metrics import cohen_kappa_score
 import scipy
 
 output_all_hDe = pd.read_csv("./eval_metric_hDe.csv")
-merged_hDe = pd.read_csv("hDe-human_chatGPT_annotation.csv")
+merged_hDe = pd.read_csv("hDe-human_chatGPT_annotation_v2.csv")
 merged_hDe.annotator = merged_hDe.annotator.astype(str)
 print("output shape:", output_all_hDe.shape[0], "annotation output: ", merged_hDe.shape[0])
 
@@ -37,7 +37,7 @@ human_mean = summary_level.groupby("model_id").mean().iloc[:,1:5].loc[model_orde
 # average ChatGPT annotation results
 summary_level = pd.DataFrame(merged_hDe[merged_hDe.annotator == "8"].set_index("id_model").loc[intersection_of_models].groupby(["model_id", "id"]).mean()).reset_index() 
 chatGPT_mean = summary_level.groupby("model_id").mean().iloc[:,1:5].loc[model_order]
-
+print(chatGPT_mean)
 order_anno =["coherence_human","coherence_chatGPT", "consistency_human", "consistency_chatGPT",
              "fluency_human", "fluency_chatGPT", "relevance_human",   'relevance_chatGPT']
 annotation_human_chatty = pd.merge(human_mean.reset_index(), chatGPT_mean.reset_index(), on = "model_id", 
@@ -104,7 +104,8 @@ chatty = df[df.annotator == "8"]
 # human chatty corr
 human_chatty = pd.merge(human[['model_id', 'id', 'coherence', 'consistency', 'fluency', 'relevance',]], chatty[['model_id', 'id', 'coherence', 'consistency', 'fluency', 'relevance',]], on = ["id", "model_id"], how = "left", suffixes = ["_human", "_chatty"]).dropna()
 
-human_chatty.corr("spearman").loc[["coherence_human", "consistency_human", "fluency_human", "relevance_human"], ["coherence_chatty", "consistency_chatty", "fluency_chatty", "relevance_chatty"]].to_csv("outputs/hDe_human_chatty_agreement.csv")
+human_chatty_cor = human_chatty.corr("spearman").loc[["coherence_human", "consistency_human", "fluency_human", "relevance_human"], ["coherence_chatty", "consistency_chatty", "fluency_chatty", "relevance_chatty"]]
+pd.Series(np.diag(human_chatty_cor), index=[human_chatty_cor.index, human_chatty_cor.columns]).to_csv("outputs/hDe_human_chatty_agreement.csv")
 
 merged_hDe = merged_hDe.rename(columns = {"rouge1": "ROUGE-1", "rougel":"ROUGE-L", 'bertscore_P': "BERTScore-P", 
                                           'bertscore_R':"BERTScore-R", 'bertscore_F1': "BERTScore-F1", 'bartscore': "BARTScore", 

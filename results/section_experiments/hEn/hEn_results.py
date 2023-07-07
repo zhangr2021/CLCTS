@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # load data
 output_all_hEn = pd.read_csv("./eval_metric_hEn.csv")
-merged_hEn = pd.read_csv("./hEn-human_chatGPT_annotation.csv")
+merged_hEn = pd.read_csv("./hEn-human_chatGPT_annotation_v2.csv")
 print("shape of all outputs:", output_all_hEn.shape[0], "\n shape of all human annotation:",merged_hEn.shape[0])
 
 order_metric = ['rouge1', 'rougel', 'bertscore_P',
@@ -138,12 +138,4 @@ sns.heatmap(caseALL.loc[:,metric_diff].round(2),
             linewidth=0.5,
             cmap="coolwarm_r")
 plt.savefig('./outputs/hEn-mul-segment_cor.pdf',bbox_inches='tight', pad_inches=0 )  
-
-
-
-
-
-
-
-
 
