@@ -15,7 +15,7 @@ To reproduce the evaluations conducted in this work, please check the folder [re
 
 We provide both human and ChatGPT evaluation results together with automatic metric evaluation for [hDe](results/section_experiments/hDe) and [hEn](results/section_experiments/hEn). 
 
-# Citation
+## Citation
 If you use the code or data from this work, please include the following citation:
 ```
 @article{zhang_Ouni_Eger_2023cross,
@@ -26,7 +26,7 @@ If you use the code or data from this work, please include the following citatio
 }
 ```
 
-# Contacts
+## Contacts
 If you have any questions, feel free to contact us!
 
 Ran Zhang ([ran.zhang@uni-bielefeld.de](mailto:ran.zhang@uni-bielefeld.de)), Jihed Ouni ([jihed.ouni@stud.tu-darmstadt.de](mailto:jihed.ouni@stud.tu-darmstadt.de)) and Steffen Eger ([steffen.eger@uni-bielefeld.de](mailto:steffen.eger@uni-bielefeld.de))
