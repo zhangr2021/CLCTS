@@ -18,7 +18,7 @@ We provide both human and ChatGPT evaluation results together with automatic met
 # Citation
 If you use the code or data from this work, please include the following citation:
 ```
-@article{zhang2023cross,
+@article{zhang_Ouni_Eger_2023cross,
   title={Cross-lingual Cross-temporal Summarization: Dataset, Models, Evaluation},
   author={Zhang, Ran and Ouni, Jihed and Eger, Steffen},
   journal={arXiv preprint arXiv:2306.12916},
