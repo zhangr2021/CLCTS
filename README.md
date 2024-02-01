@@ -1,4 +1,4 @@
-# CLCTS
+# CLCTS:  Cross-lingual Cross-temporal Summarization: Dataset, Models, Evaluation
 (work in progress)
 This repository contains the code and data for our paper: [Cross-lingual Cross-temporal Summarization:
 Dataset, Models, Evaluation](https://arxiv.org/abs/2306.12916).
