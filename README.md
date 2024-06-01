@@ -30,5 +30,5 @@ If you use the code or data from this work, please include the following citatio
 ## Contacts
 If you have any questions, feel free to contact us!
 
-Ran Zhang ([ran.zhang@uni-bielefeld.de](mailto:ran.zhang@uni-mannheim.de)), Jihed Ouni ([jihed.ouni@stud.tu-darmstadt.de](mailto:jihed.ouni@stud.tu-darmstadt.de)) and Steffen Eger ([steffen.eger@uni-bielefeld.de](mailto:steffen.eger@uni-mannheim.de))
+Ran Zhang ([ran.zhang@uni-mannheim.de](mailto:ran.zhang@uni-mannheim.de)), Jihed Ouni ([jihed.ouni@stud.tu-darmstadt.de](mailto:jihed.ouni@stud.tu-darmstadt.de)) and Steffen Eger ([steffen.eger@uni-mannheim.de](mailto:steffen.eger@uni-mannheim.de))
 
